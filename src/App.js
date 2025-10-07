@@ -48,9 +48,22 @@ function App() {
 
   return (
     <div className="flex flex-col items-center p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800">
-        Path-Finding Visualizer
-      </h1>
+      <div className="text-center mb-6">
+        <h1 className="text-3xl font-bold text-gray-800">
+          Pathfinding Visualizer
+        </h1>
+        <p className="text-sm text-gray-600 mt-2">
+          Made by{' '}
+          <a 
+            href="https://phamduyanminh.github.io/MinhPhamPortfolio/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-blue-800 underline"
+          >
+            Martin Pham
+          </a>
+        </p>
+      </div>
 
       <Instructions />
 
