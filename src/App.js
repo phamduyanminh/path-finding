@@ -4,6 +4,7 @@ import { Instructions } from './components/Instructions/Instructions';
 import { PlacementModeSelector } from './components/Controls/PlacementModeSelector';
 import { Legend } from './components/Legend/Legend';
 import { Controls } from './components/Controls/Controls';
+import { AlgorithmDescription } from './components/AlgorithmDescription/AlgorithmDescription';
 import { useGrid } from './hooks/useGrid';
 import { usePathfinding } from './hooks/usePathfinding';
 import { useMouse } from './hooks/useMouse';
@@ -73,12 +74,17 @@ function App() {
         disabled={isRunning}
       />
 
-      <Grid
-        grid={grid}
-        onMouseDown={handleMouseDown}
-        onMouseEnter={handleMouseEnter}
-        onMouseUp={handleMouseUp}
-      />
+      {/* Main content area with grid and description side by side */}
+      <div className="flex flex-col lg:flex-row gap-6 mb-6 items-start">
+        <Grid
+          grid={grid}
+          onMouseDown={handleMouseDown}
+          onMouseEnter={handleMouseEnter}
+          onMouseUp={handleMouseUp}
+        />
+
+        <AlgorithmDescription algorithm={algorithm} />
+      </div>
 
       <Legend />
 
